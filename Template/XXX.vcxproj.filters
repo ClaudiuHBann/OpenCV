@@ -66,10 +66,10 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
-      <UniqueIdentifier>{8b2bbbf4-7363-46f7-8b38-2ffd40139e3f}</UniqueIdentifier>
+      <UniqueIdentifier>{9573d57d-2ac9-485c-a28e-c8ea99295955}</UniqueIdentifier>
     </Filter>
     <Filter Include="Utility">
-      <UniqueIdentifier>{c5fa7669-fabd-4efb-86ff-5b046e72e766}</UniqueIdentifier>
+      <UniqueIdentifier>{da4803d7-2505-46b3-8718-2ef0abef7e74}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -80,9 +80,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Fliperino_TemporaryKey.pfx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>
