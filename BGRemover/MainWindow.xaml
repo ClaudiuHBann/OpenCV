@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="BGRemover.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:BGRemover"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="BGRemover"
+        mc:Ignorable="d">
+
+    <Canvas x:Name="canvas"
+            AllowDrop="True"
+            PointerPressed="OnPointerPressedCanvas"
+            PointerReleased="OnPointerReleasedCanvas"
+            PointerMoved="OnPointerMovedCanvas"
+            DragOver="OnDragOverCanvas"
+            Drop="OnDropCanvas">
+
+        <Canvas.ContextFlyout>
+            <MenuFlyout>
+
+                <MenuFlyoutItem Text="Edit"
+                                Click="OnClickCMFIEdit" />
+                <MenuFlyoutItem Text="Save"
+                                Click="OnClickCMFISave" />
+
+            </MenuFlyout>
+        </Canvas.ContextFlyout>
+
+        <Canvas.Background>
+            <ImageBrush x:Name="canvasBgImgBrush"
+                        Stretch="Fill" />
+        </Canvas.Background>
+
+        <TextBlock x:Name="text"
+                   Text="Drag And Drop An Image" />
+
+        <Rectangle x:Name="rectangleCanvas"
+                   Width="{Binding ActualWidth, ElementName=canvas}"
+                   Height="{Binding ActualHeight, ElementName=canvas}" />
+
+        <Rectangle x:Name="rectangleROI"
+                   PointerPressed="OnPointerPressedROI"
+                   PointerReleased="OnPointerReleasedROI"
+                   PointerMoved="OnPointerMovedROI"
+                   Stroke="Black"
+                   Fill="Transparent"
+                   StrokeDashArray="18 6">
+
+            <Rectangle.ContextFlyout>
+                <MenuFlyout>
+
+                    <MenuFlyoutItem Text="Save"
+                                    Click="OnClickCMFISave" />
+
+                </MenuFlyout>
+            </Rectangle.ContextFlyout>
+
+        </Rectangle>
+
+    </Canvas>
+
+</Window>

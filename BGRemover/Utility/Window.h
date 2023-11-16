@@ -1,6 +1,6 @@
 #pragma once
 
-namespace winrt::AddText::implementation
+namespace winrt::BGRemover::implementation
 {
 struct MainWindow;
 }
@@ -10,7 +10,7 @@ namespace hbann
 class Window
 {
   public:
-    [[nodiscard]] static ::HWND GetHWND(const winrt::AddText::implementation::MainWindow &aMainWindow);
+    [[nodiscard]] static ::HWND GetHWND(const winrt::BGRemover::implementation::MainWindow &aMainWindow);
 
     [[nodiscard]] static ::RECT GetDesktopResolution() noexcept;
 

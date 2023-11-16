@@ -4,7 +4,7 @@
 
 namespace hbann
 {
-/* [[nodiscard]] static */ ::HWND Window::GetHWND(const winrt::AddText::implementation::MainWindow &aMainWindow)
+/* [[nodiscard]] static */ ::HWND Window::GetHWND(const winrt::BGRemover::implementation::MainWindow &aMainWindow)
 {
     auto iWindowNative(aMainWindow.try_as<::IWindowNative>());
     winrt::check_bool(iWindowNative);
